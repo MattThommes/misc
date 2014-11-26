@@ -16,7 +16,7 @@ These are my miscellaneous scripts that don't yet fit in to a more formal reposi
 
 ## parse_params.php
 
-Let's say you have a URL-encoded string, and you want to convert it to a JSON string. Example:
+Let's say you have a URL-encoded string, and you want to convert it to a JSON string (or just more readable output). Example:
 
 	var1=value1&var2%5Ba%5D=value2&var2%5Bb%5D=value3&var3%5Ba%5D%5Bc%5D=value5&var3%5Ba%5D%5Bd%5D=value6&var4=value4
 
