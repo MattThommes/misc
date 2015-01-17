@@ -1,0 +1,27 @@
+{
+  "name": "MattThommes-gamedaze",
+  "version": "0.0.1",
+  "description": "Test script in Node.js to fetch Major League Baseball venues from Foursquare",
+  "keywords": [
+    "Node.js",
+    "Foursquare",
+    "Sports"
+  ],
+  "author": {
+    "name": "Matt Thommes",
+    "email": "matt@thomm.es",
+    "url":  "http://blog.matt.thomm.es"
+  },
+  "homepage": "https://github.com/MattThommes/misc/tree/master/gamedaze",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattThommes/misc/tree/master/gamedaze"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "main": "server.js"
+}
