@@ -7,6 +7,10 @@ These are my miscellaneous scripts that don't yet fit in to a more formal reposi
 
 These are just some basic Node.js test scripts that I started as an experiment. I wanted to fetch all Major League Baseball stadiums and somehow display them in a web interface. **These scripts are experimental only and may not work completely yet.**
 
+## `datetime.php`
+
+Random date/time conversions and output.
+
 ## `google_maps.php`
 
 [See here](https://developers.google.com/maps/documentation/javascript/tutorial#api_key) on how to generate your API key. Put that value in `google_maps_auth.php` file. The contents should look like:
@@ -17,6 +21,10 @@ These are just some basic Node.js test scripts that I started as an experiment. 
 		$auth_key = "";
 
 	?>
+
+## `google_sheets.js`
+
+An example function to use with Google Sheets scripting. [Read more on my blog post](http://blog.matt.thomm.es/post/135857895761/google-sheets-programming).
 
 ## `parse_params.php`
 
