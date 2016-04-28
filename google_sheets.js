@@ -5,12 +5,13 @@ var sheet = SpreadsheetApp.getActiveSheet();
 var active_row_dynamic = sheet.getActiveRange().getRow();
 
 // STATIC: The row we are calculating - the current pay period (currently in yellow).
+// Set this up in the "Random" sheet.
 var active_row = get_range_value("Random!B3");
 
 // The row we started doing the "Borrowed" calculations for.
 var starting_row = get_range_value("Random!B4");
 
-//var accounts = {}
+//var accounts = {};
 
 /**
  * Displays the "Borrowed (Payments)" column headers (for each account). IE: "Amazon Store card ($163.68)"
@@ -59,10 +60,15 @@ function calculate_creditcards_total() {
     // That "over payment" ($3.24 in our example above) becomes `amazon_visa_value`, which we have to deduct in the "Credits Cards" column.
     // It's extra money being taken out, so it has to appear there.
     amazon_visa_value = amazon_visa_current_row_paid - amazon_visa_current_row_wo_borrowed;
+  } else {
+    // We paid LESS than what we spent.
+    // Return 0, because we're not deducting anything extra from our running balance.
+    // The extra portion (the overage amount) just adds to the "Owed" balance.
+    amazon_visa_value = 0;
   }
   // Get the values for every account (column) except the Amazon Visa one (the Amazon Visa charges we already deduct in the billing period),
   // Also avoid the "PNC savings" column.
-  var ranges_to_calculate = ["C", "D", "E", "G", "H", "I"];
+  var ranges_to_calculate = ["C", "D", "E", "G", "H", "I", "J"];
   var ranges_value = 0;
   for (var i in ranges_to_calculate) {
     // IE: 'Borrowed (Payments)'!C14
